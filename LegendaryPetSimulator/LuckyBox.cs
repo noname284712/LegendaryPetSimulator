@@ -23,7 +23,7 @@
 
             for (var i = 0; i < 79; i++)
             {
-                data.Add(Rarity.Rare);
+                data.Add(Rarity.Uncommon);
             }
         }
 
