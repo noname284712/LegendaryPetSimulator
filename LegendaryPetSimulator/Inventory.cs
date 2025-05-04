@@ -31,7 +31,7 @@
         {
             while (this.data[Rarity.Uncommon] >= 3)
             {
-                this.data[Rarity.Uncommon] = -2;
+                this.data[Rarity.Uncommon] -= 2;
                 if (Random.Shared.NextDouble() < 0.3)
                 {
                     this.data[Rarity.Rare]++;
@@ -40,7 +40,7 @@
 
             while (this.data[Rarity.Rare] >= 3)
             {
-                this.data[Rarity.Rare] = -2;
+                this.data[Rarity.Rare] -= 2;
                 if (Random.Shared.NextDouble() < 0.3)
                 {
                     this.data[Rarity.Elite]++;
@@ -49,16 +49,16 @@
 
             while (this.data[Rarity.Elite] >= 3)
             {
-                this.data[Rarity.Elite] = -2;
+                this.data[Rarity.Elite] -= 2;
                 if (Random.Shared.NextDouble() < 0.25)
                 {
                     this.data[Rarity.Epic]++;
                 }
             }
 
-            if (this.data[Rarity.Epic] > 2)
+            if (this.data[Rarity.Epic] >= 3)
             {
-                this.data[Rarity.Epic]--;
+                this.data[Rarity.Epic] -= 2;
                 if (Random.Shared.NextDouble() < 0.2)
                 {
                     this.data[Rarity.Legendary]++;
